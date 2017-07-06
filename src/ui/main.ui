@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>QB50 Uydu Kontrol v0.1</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuDosya">
+    <property name="title">
+     <string>&amp;Dosya</string>
+    </property>
+    <addaction name="action_Ayarlar"/>
+    <addaction name="separator"/>
+    <addaction name="action_Cikis"/>
+   </widget>
+   <widget class="QMenu" name="menu_Yardim">
+    <property name="title">
+     <string>&amp;Yardim</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="action_Hakkinda"/>
+   </widget>
+   <addaction name="menuDosya"/>
+   <addaction name="menu_Yardim"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_Ayarlar">
+   <property name="text">
+    <string>&amp;Ayarlar</string>
+   </property>
+  </action>
+  <action name="action_Cikis">
+   <property name="text">
+    <string>&amp;Cikis</string>
+   </property>
+  </action>
+  <action name="action_Hakkinda">
+   <property name="text">
+    <string>&amp;Hakkinda</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>action_Cikis</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
